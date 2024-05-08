@@ -1,0 +1,2 @@
+Pretrained models that I have trained myself have been added in two formats, h5 and Keras.
+Feel free to create your own model and use it instead.

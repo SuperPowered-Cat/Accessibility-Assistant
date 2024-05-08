@@ -1,0 +1,53 @@
+# Code Explanation for functions.py
+
+functions.py contains Python functions that implement the core functionalities of the Accessibility Assistant application. Below are the details of each function:
+
+1. draw_styled_landmarks(image, results):
+   - This function takes an image and the results from Mediapipe detection as input.
+   - It draws styled landmarks (such as facial landmarks, pose connections, hand connections) on the input image using Mediapipe's drawing functions.
+
+2. mediapipe_detect(image, model):
+   - This function performs detection using Mediapipe on the input image with the specified model.
+   - It converts the image to RGB format, processes it with Mediapipe, and returns the processed image and results.
+
+3. extract_keypoints(results):
+   - This function extracts keypoints from the results of Mediapipe detection.
+   - It returns flattened arrays containing pose, face, left hand, and right hand keypoints.
+
+4. sign_language_recognition():
+   - This function performs sign language recognition using the loaded machine learning model.
+   - It captures video frames from the webcam, processes them with Mediapipe, extracts keypoints, and predicts sign language gestures using the model.
+   - The recognized gestures are displayed on the screen using OpenCV.
+
+5. text_to_speech(text):
+   - This function converts text to speech using the gTTS (Google Text-to-Speech) library.
+   - It saves the generated audio to a temporary file and plays the audio using the playsound library.
+
+6. speech_to_text():
+   - This function converts speech input from the user to text using the SpeechRecognition library.
+   - It listens for microphone input, adjusts ambient noise level, and recognizes speech using Google's speech recognition service.
+   - The recognized text is returned as output.
+
+# Code Explanation for main.py
+
+main.py contains the Streamlit application code that integrates the functionalities of the Accessibility Assistant. Below are the key components and functionalities of the main.py file:
+
+1. Streamlit UI Setup:
+   - The Streamlit app is initialized with a title and introductory text about the project.
+
+2. Button Functionalities:
+   - Three buttons are defined for Text to Speech, Sign Language, and Speech to Text functionalities.
+   - On clicking each button, the corresponding functionality is triggered.
+
+3. Function Integration:
+   - The functions defined in functions.py (e.g., text_to_speech, sign_language_recognition, speech_to_text) are imported and used within the Streamlit app.
+
+4. User Inputs and Outputs:
+   - Text inputs and outputs are provided for functionalities like Text to Speech and Speech to Text, allowing users to input text or speak into the microphone.
+
+5. Webcam Feed and Sign Language Recognition:
+   - The Streamlit app displays the webcam feed and overlays the recognized sign language gestures on the screen in real-time.
+
+6. Error Handling:
+   - Error handling mechanisms are implemented to handle exceptions and provide informative messages to users in case of errors or failures.
+

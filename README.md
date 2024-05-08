@@ -17,8 +17,8 @@ Detailed code explanation is given in [Code Explanation](codeexplain.txt)
 ## Installation and Usage
 
 For instructions on how to install and use Accessibility Assistant, please refer to the following files:
-- [Installation](installation.txt): Provides guidelines on installing and setting up the required dependencies.
-- [Usage](usage.txt): Explains how to use the application and its functionalities.
+- [Installation](installation.md): Provides guidelines on installing and setting up the required dependencies.
+- [Usage](usage.md): Explains how to use the application and its functionalities.
 
 ## Purpose
 
